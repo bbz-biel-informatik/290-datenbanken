@@ -1,6 +1,9 @@
 {
-    "slidev.include": [
-        "**/slides.md",
-        "test.md"
-    ]
+  "pasteImage.path": "${currentFileDir}/images",
+  "pasteImage.insertPattern": "<img src=\"${imageFilePath}\" alt=\"\">",
+  "pasteImage.encodePath": "urlEncode",
+
+  "[html]": {
+    "pasteImage.insertPattern": "<img src=\"${imageFilePath}\" alt=\"\">"
+  }
 }
