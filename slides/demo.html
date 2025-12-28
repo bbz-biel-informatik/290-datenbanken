@@ -25,15 +25,10 @@
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="../revealjs/plugin/highlight/monokai.css" />
+
   </head>
 
   <body>
-    <body>
-      <script type="module">
-        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-        mermaid.initialize({ startOnLoad: true });
-      </script>
-    </body>
     <div class="reveal">
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
@@ -799,28 +794,10 @@ Reveal.on( 'customevent', function() {
       </div>
     </div>
 
-    <script src="../revealjs/dist/reveal.js"></script>
-    <script src="../revealjs/plugin/zoom/zoom.js"></script>
-    <script src="../revealjs/plugin/notes/notes.js"></script>
-    <script src="../revealjs/plugin/search/search.js"></script>
-    <script src="../revealjs/plugin/markdown/markdown.js"></script>
-    <script src="../revealjs/plugin/highlight/highlight.js"></script>
-    <script>
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        center: true,
-        hash: true,
-
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [
-          RevealZoom,
-          RevealNotes,
-          RevealSearch,
-          RevealMarkdown,
-          RevealHighlight,
-        ],
-      });
+    <script type="module">
+      import mermaid from "../revealjs/node_modules/mermaid/dist/mermaid.esm.min.mjs";
+      mermaid.initialize({ startOnLoad: true });
     </script>
+    <script type="module" src="../revealjs/settings.js"></script>
   </body>
 </html>
