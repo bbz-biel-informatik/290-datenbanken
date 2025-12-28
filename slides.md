@@ -10,13 +10,17 @@ transition: fade
 ---
 ```javascript
 const asdf = "true";
-test
 ```
 ---
+## Netflix
 ```mermaid
-pie
-    title NETFLIX
-    "Movies" : 70
-    "Series" : 30
+---
+title: Order example
+---
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+
 ```
 ---

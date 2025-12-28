@@ -1,6 +1,10 @@
 (() => {
-  const loadMermaid = () =>
-    new Promise((resolve, reject) => {
+  let mermaidReady;
+
+  const loadMermaid = () => {
+    if (mermaidReady) return mermaidReady;
+
+    mermaidReady = new Promise((resolve, reject) => {
       if (window.mermaid) return resolve(window.mermaid);
 
       const script = document.createElement("script");
@@ -10,6 +14,9 @@
       document.head.appendChild(script);
     });
 
+    return mermaidReady;
+  };
+
   const renderMermaidBlocks = () => {
     const { mermaid } = window;
     if (!mermaid) {
@@ -18,15 +25,16 @@
     }
 
     const mermaidBlocks = Array.from(
-      document.querySelectorAll("pre > code.language-mermaid")
+      document.querySelectorAll(".language-mermaid")
     );
+    console.log(mermaidBlocks);
 
     if (mermaidBlocks.length === 0) return;
 
     mermaid.initialize({ startOnLoad: false });
 
     mermaidBlocks.forEach((code) => {
-      const pre = code.closest("pre");
+      const pre = code.closest("marp-pre");
       if (!pre) return;
 
       const container = document.createElement("div");
@@ -45,9 +53,17 @@
       .catch((err) => console.error(err));
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start);
-  } else {
+  const onReady = () => {
     start();
+
+    // Re-run if new slides get added (e.g., presenter view clones).
+    const observer = new MutationObserver(() => start());
+    observer.observe(document.body, { childList: true, subtree: true });
+  };
+
+  if (document.readyState === "complete") {
+    onReady();
+  } else {
+    window.addEventListener("load", onReady, { once: true });
   }
 })();
