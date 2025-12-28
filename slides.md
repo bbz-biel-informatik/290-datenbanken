@@ -3,7 +3,7 @@ marp: true
 transition: fade
 ---
 
-<script type="module" src="./extensions/md-extensions.js"></script>
+<script src="./extensions/md-extensions.js"></script>
 
 
 # Titel
