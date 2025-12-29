@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Preloaded SQLite (Browser)</title>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; }
+    textarea { width: 100%; height: 140px; }
+    table { border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 4px 8px; }
+  </style>
+</head>
+<body>
+
+<h2>SQL Murder Mystery (Browser)</h2>
+
+<textarea id="sql">
+SELECT name
+FROM sqlite_master
+WHERE type='table';
+</textarea>
+
+<br>
+<button onclick="run()">Run SQL</button>
+
+<div id="out"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+<script>
+let SQL, db;
+const DB_KEY = "murder-mystery-db";
+
+(async function init() {
+  SQL = await initSqlJs({
+    locateFile: f =>
+      `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${f}`
+  });
+
+  const saved = await idbGet(DB_KEY);
+
+  if (saved) {
+    db = new SQL.Database(saved);
+    console.log("Loaded DB from IndexedDB");
+  } else {
+    const res = await fetch("sql-murder-mystery.db");
+    const buf = await res.arrayBuffer();
+    db = new SQL.Database(new Uint8Array(buf));
+    await saveDB();
+    console.log("Loaded DB from file");
+  }
+})();
+
+async function run() {
+  const res = db.exec(document.getElementById("sql").value);
+  render(res);
+  await saveDB();
+}
+
+function render(res) {
+  const out = document.getElementById("out");
+  out.innerHTML = "";
+
+  if (!res.length) {
+    out.textContent = "No results";
+    return;
+  }
+
+  const { columns, values } = res[0];
+  out.innerHTML = `
+    <table>
+      <thead>
+        <tr>${columns.map(c => `<th>${c}</th>`).join("")}</tr>
+      </thead>
+      <tbody>
+        ${values.map(r =>
+          `<tr>${r.map(v => `<td>${v}</td>`).join("")}</tr>`
+        ).join("")}
+      </tbody>
+    </table>
+  `;
+}
+
+/* IndexedDB helpers */
+function idbGet(key) {
+  return new Promise(resolve => {
+    const req = indexedDB.open("sqlite-store", 1);
+    req.onupgradeneeded = e =>
+      e.target.result.createObjectStore("files");
+    req.onsuccess = e => {
+      const db = e.target.result;
+      const tx = db.transaction("files", "readonly");
+      const get = tx.objectStore("files").get(key);
+      get.onsuccess = () => resolve(get.result);
+      get.onerror = () => resolve(null);
+    };
+  });
+}
+
+function saveDB() {
+  return new Promise(resolve => {
+    const data = db.export();
+    const req = indexedDB.open("sqlite-store", 1);
+    req.onupgradeneeded = e =>
+      e.target.result.createObjectStore("files");
+    req.onsuccess = e => {
+      const idb = e.target.result;
+      const tx = idb.transaction("files", "readwrite");
+      tx.objectStore("files").put(data, DB_KEY);
+      tx.oncomplete = resolve;
+    };
+  });
+}
+</script>
+
+</body>
+</html>
