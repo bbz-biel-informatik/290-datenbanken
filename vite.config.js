@@ -14,11 +14,14 @@ export default defineConfig({
         server.middlewares.use(async (req, res, next) => {
           const url = req.url.split('?')[0];
           if (url.endsWith('.html')) {
+            // Check if corresponding md exists
             const mdPath = path.join(__dirname, url.replace(/\.html$/, '.md'));
             if (fs.existsSync(mdPath)) {
               try {
-                const html = await compilePage(mdPath);
+                let html = await compilePage(mdPath);
+                html = await server.transformIndexHtml(url, html);
                 res.setHeader('Content-Type', 'text/html');
+                res.setHeader('Cache-Control', 'no-cache');
                 res.end(html);
                 return;
               } catch (e) {
@@ -55,7 +58,7 @@ export default defineConfig({
             type: 'full-reload',
             path: '*'
           });
-          return []
+          return [];
         }
       }
     }
