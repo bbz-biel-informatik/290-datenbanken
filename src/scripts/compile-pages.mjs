@@ -1,13 +1,14 @@
-
 import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
 import { glob } from 'glob';
+import { fileURLToPath } from 'url';
 
-const __dirname = path.resolve();
-const projectRoot = __dirname; // Since we run from root
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, '..', '..');
 
-const template = `<!DOCTYPE html>
+export const template = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -94,8 +95,14 @@ const template = `<!DOCTYPE html>
 </body>
 </html>`;
 
-async function compilePages() {
-    // Compile markdown files in-place
+export async function compilePage(filePath) {
+    const markdown = fs.readFileSync(filePath, 'utf-8');
+    const htmlContent = marked.parse(markdown);
+    return template.replace('{{content}}', htmlContent);
+}
+
+async function main() {
+    // Compile markdown files to dist
     const files = await glob('**/*.md', { 
         cwd: projectRoot, 
         ignore: ['node_modules/**', 'dist/**', 'README.md'] 
@@ -103,17 +110,21 @@ async function compilePages() {
     
     for (const file of files) {
         const filePath = path.join(projectRoot, file);
-        const markdown = fs.readFileSync(filePath, 'utf-8');
-        const htmlContent = marked.parse(markdown);
+        const finalHtml = await compilePage(filePath);
         
-        const finalHtml = template.replace('{{content}}', htmlContent);
+        // Output to dist preserving structure
+        const relativePath = file; // relative to root
+        const htmlFileName = relativePath.replace(/\.md$/, '.html');
+        const outputFilePath = path.join(projectRoot, 'dist', htmlFileName);
         
-        const outputFilePath = filePath.replace('.md', '.html');
-        // If replacing index.md, it overwrites index.html which is desired.
+        fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
         
         fs.writeFileSync(outputFilePath, finalHtml);
         console.log(`Compiled ${file} to ${outputFilePath}`);
     }
 }
 
-compilePages().catch(console.error);
+// Check if running directly
+if (process.argv[1] === __filename) {
+    main().catch(console.error);
+}

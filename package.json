@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run pages && vite",
-    "build": "npm run drawings && npm run pages && vite build && npm run pdf",
+    "dev": "vite",
+    "build": "npm run drawings && vite build && npm run pdf",
     "preview": "vite preview",
     "drawings": "node src/scripts/compile-drawings.mjs",
     "pages": "node src/scripts/compile-pages.mjs",
