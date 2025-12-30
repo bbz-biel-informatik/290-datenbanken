@@ -87,6 +87,12 @@ export default defineConfig({
             path.relative(__dirname, file).slice(0, -3), // Remove .md extension
             resolve(__dirname, file).replace(/\.md$/, '.html')
           ])
+        ),
+        ...Object.fromEntries(
+          globSync('slides/**/*.html', { ignore: ['node_modules/**', 'dist/**'] }).map(file => [
+            path.relative(__dirname, file).slice(0, -5), // Remove .html extension
+            resolve(__dirname, file)
+          ])
         )
       }
     }
