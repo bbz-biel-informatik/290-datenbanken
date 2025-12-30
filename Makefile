@@ -8,3 +8,5 @@ pdf:
 
 drawings:
 	cd revealjs && node scripts/compile-drawings.mjs
+
+build: drawings pdf start
