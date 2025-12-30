@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305.3206481933594 124.81773376464844" width="305.3206481933594" height="124.81773376464844">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="305.3206481933594" height="124.81773376464844" fill="#ffffff"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 74.31802368164062 52.40886688232422)"><path d="M0.97 1.53 C41.28 0.67, 80.98 -1.38, 149.46 -0.9 M0.93 -0.23 C56.71 -1.36, 112.83 -0.46, 148.33 -0.83 M149.81 -1.09 C150.21 22.65, 149.41 43.1, 149.39 105.81 M148.9 -0.3 C147.96 34.68, 148.81 71.25, 148.01 105.75 M146.83 104.63 C110.4 104.49, 76.34 105.08, -0.79 106.5 M149.24 105.79 C105.89 106.32, 62.82 105.84, -0.25 104.24 M1.14 105.79 C2.61 72.82, 1.67 40.25, 1.17 0.7 M-0.65 103.92 C-1.57 79.73, 0.32 53.16, -0.25 0.36" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g><g transform="translate(62.10804748535156 49.90886688232422) rotate(0 22.209976196289062 12.5)"><text x="22.209976196289062" y="NaN" font-family="Segoe UI Emoji" font-size="20px" fill="#1e1e1e" text-anchor="middle" style="white-space: pre;" direction="ltr">asdf</text></g><g stroke-linecap="round" transform="translate(201.55435180664062 14.571937561035156) rotate(0 46.883148193359375 46.891273498535156)"><path d="M-0.34 0.9 C34.5 0.16, 71.5 1.01, 94.39 -0.87 M-0.94 0.28 C27.6 1.26, 54.48 0.84, 94.39 0.15 M92.7 1.93 C94.47 30.59, 93.69 65.54, 92 94.61 M94.28 -0.34 C93.36 28.06, 92.89 55.27, 92.9 94.56 M94.08 92.09 C61.7 91.01, 29.03 92.71, 1.87 92.93 M93.66 93.27 C59.05 93.94, 24.15 94.91, 0.28 93.68 M-1.67 93.06 C2.25 69.2, 2.5 43.97, -0.05 1.02 M-0.39 92.84 C1.18 61.01, 1.45 27.51, 0.46 0.02" stroke="#1e1e1e" stroke-width="2" fill="none"></path></g></svg>
