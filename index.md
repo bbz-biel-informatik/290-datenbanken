@@ -1,5 +1,8 @@
 # Modul 290 - Datenbanken
 
+## Slides
+- [Lektion 1: Intro](slides/01-intro.html)
+
 ## Semesterplan
 | Woche - Datum | Thema              | Tätigkteiten |
 |---------------|--------------------|--------------|

@@ -9,4 +9,11 @@ pdf:
 drawings:
 	cd revealjs && node scripts/compile-drawings.mjs
 
-build: drawings pdf start
+pages:
+	cd revealjs && node scripts/compile-pages.mjs
+
+
+clean:
+	rm -rf build
+
+build: drawings pdf pages start
