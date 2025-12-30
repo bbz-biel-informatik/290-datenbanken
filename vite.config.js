@@ -4,6 +4,7 @@ import { globSync } from 'glob';
 
 export default defineConfig({
   root: '.',
+  base: './',
   build: {
     outDir: 'dist',
     rollupOptions: {
