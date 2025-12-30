@@ -1,4 +1,4 @@
 {
   "pasteImage.path": "${projectRoot}/images",
-  "pasteImage.insertPattern": "<img src=\"/images/${imageFileName}\" alt=\"\" />"
+  "pasteImage.insertPattern": "<img src=\"${imageFilePath}\" alt=\"\" />"
 }
