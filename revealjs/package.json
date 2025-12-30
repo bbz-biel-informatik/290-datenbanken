@@ -10,7 +10,6 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "build": "gulp build",
     "pdf": "node scripts/export-pdfs.mjs"
   },
   "author": {
@@ -34,13 +33,16 @@
     "@babel/core": "^7.23.2",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-env": "^7.23.2",
+    "@excalidraw/utils": "^0.1.2",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "babel-plugin-transform-html-import-to-string": "2.0.0",
+    "canvas": "^2.11.2",
     "colors": "^1.4.0",
     "core-js": "^3.33.1",
+    "excalidraw-to-svg": "^3.1.0",
     "fitty": "^2.3.7",
     "glob": "^10.3.10",
     "gulp": "^5.0.0",

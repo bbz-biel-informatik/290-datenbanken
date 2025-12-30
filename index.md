@@ -7,7 +7,7 @@
 | W2            | ERD                |              |
 | W3            | Logisches Schema   |              |
 | W4            | Schriftlicher Test |              |
-| W5            | Einschränkungen    |              |
+| W5            | Schriftlicher Test    |              |
 | W6            | DBMS / Intro SQL   |              |
 | W7            | Select Queries     |              |
 | W8            | Aggregationen      |              |
@@ -25,3 +25,10 @@
 | W20           |                    |              |
 | W21           |                    |              |
 | W22           |                    |              |
+
+## Todo
+- [ ] Excalidraw einbinden
+- [ ] Lektionen 1-3 erstellen
+- [ ] Lernziele Prüfung formulieren
+- [ ] Cheatsheet SQL Queries erstellen
+- [ ] SQL Framework erstellen
