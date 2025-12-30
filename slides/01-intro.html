@@ -19,14 +19,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../revealjs/dist/reset.css" />
-    <link rel="stylesheet" href="../revealjs/dist/reveal.css" />
-    <link rel="stylesheet" href="../revealjs/dist/drawer.css" />
-
-    <link rel="stylesheet" href="../revealjs/dist/theme/white.css" id="theme" />
-
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="../revealjs/plugin/highlight/monokai.css" />
+    <!-- CSS is now imported via reveal-setup.js -->
   </head>
 
   <body>
@@ -35,7 +29,7 @@
       <div class="slides">
         <section>
           <h1>Datenbanken</h1>
-          <img style="width: 400px" src="/images/meme-1.png" />
+          <img style="width: 400px" src="/meme-1.png" />
         </section>
         <section>
           <h2>Semesterplan</h2>
@@ -44,7 +38,7 @@
             <li>Prüfung</li>
             <li>Praxis</li>
             <li>Projekt</li>
-            <img src="/images/test.svg" />
+            <img src="/test.svg" />
           </ul>
         </section>
 
@@ -786,6 +780,7 @@ Reveal.on( 'customevent', function() {
       </div>
     </div>
 
-    <script type="module" src="../revealjs/settings.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/reveal-setup.js"></script>
   </body>
 </html>

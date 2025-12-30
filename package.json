@@ -1,0 +1,23 @@
+{
+  "name": "290-datenbanken",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run pages && vite",
+    "build": "npm run drawings && npm run pages && vite build",
+    "preview": "vite preview",
+    "drawings": "node src/scripts/compile-drawings.mjs",
+    "pages": "node src/scripts/compile-pages.mjs"
+  },
+  "dependencies": {
+    "mermaid": "^11.12.2",
+    "reveal.js": "^5.1.0"
+  },
+  "devDependencies": {
+    "excalidraw-to-svg": "^3.1.0",
+    "glob": "^10.3.10",
+    "marked": "^4.3.0",
+    "vite": "^6.0.0"
+  }
+}
