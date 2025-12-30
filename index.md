@@ -27,7 +27,7 @@
 | W22           |                    |              |
 
 ## Todo
-- [ ] Excalidraw einbinden
+- [x] Excalidraw einbinden
 - [ ] Lektionen 1-3 erstellen
 - [ ] Lernziele Prüfung formulieren
 - [ ] Cheatsheet SQL Queries erstellen
