@@ -1,13 +1,32 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { exec } from 'node:child_process';
-import { promisify } from 'node:util';
-
-const execAsync = promisify(exec);
+import excalidrawToSvg from 'excalidraw-to-svg';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, '..', '..');
+
+export async function compileDrawing(inputPath) {
+    const outputPath = inputPath.replace(/\.excalidraw$/, '.svg');
+    const relInput = path.relative(repoRoot, inputPath);
+    const relOutput = path.relative(repoRoot, outputPath);
+    
+    console.log(`Compiling ${relInput}...`); // Log for vite
+    
+    try {
+        const inputData = await fs.readFile(inputPath, 'utf-8');
+        const scene = JSON.parse(inputData);
+        
+        const svg = await excalidrawToSvg(scene);
+        
+        await fs.writeFile(outputPath, svg.outerHTML, 'utf-8');
+        console.log(`Generated ${relOutput}`);
+        return true;
+    } catch (error) {
+        console.error(`Failed to compile ${relInput}:`, error);
+        throw error;
+    }
+}
 
 async function collectExcalidrawFiles(dir) {
     let files = [];
@@ -36,6 +55,7 @@ async function main() {
     }
 
     console.log(`Found ${files.length} .excalidraw files.`);
+    let failures = 0;
 
     for (const inputPath of files) {
         const outputPath = inputPath.replace(/\.excalidraw$/, '.svg');
@@ -52,23 +72,23 @@ async function main() {
         }
 
         if (shouldCompile) {
-            console.log(`Compiling ${path.relative(repoRoot, inputPath)}...`);
             try {
-                // Run npx excalidraw-to-svg. 
-                const relInput = path.relative(repoRoot, inputPath);
-                const relOutput = path.relative(repoRoot, outputPath);
-                
-                await execAsync(`npx excalidraw-to-svg "${relInput}" "${relOutput}"`, { cwd: repoRoot });
+                await compileDrawing(inputPath);
             } catch (error) {
-                console.error(`Failed to compile ${path.relative(repoRoot, inputPath)}:`, error.message);
+                failures++;
             }
         } else {
             console.log(`Skipping ${path.relative(repoRoot, inputPath)} (up to date)`);
         }
     }
+    
+    if (failures > 0) process.exit(1);
 }
 
-main().catch(err => {
-    console.error('Script failed:', err);
-    process.exit(1);
-});
+// Check if running directly
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+    main().catch(err => {
+        console.error('Script failed:', err);
+        process.exit(1);
+    });
+}

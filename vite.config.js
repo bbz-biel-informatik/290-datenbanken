@@ -3,6 +3,7 @@ import path, { resolve } from 'path';
 import { globSync } from 'glob';
 import fs from 'fs';
 import { compilePage } from './src/scripts/compile-pages.mjs';
+import { compileDrawing } from './src/scripts/compile-drawings.mjs';
 
 export default defineConfig({
   root: '.',
@@ -52,7 +53,7 @@ export default defineConfig({
             }
         }
       },
-      handleHotUpdate({ file, server }) {
+      async handleHotUpdate({ file, server }) {
         if (file.endsWith('.md')) {
           server.ws.send({
             type: 'full-reload',
@@ -60,10 +61,22 @@ export default defineConfig({
           });
           return [];
         }
+        if (file.endsWith('.excalidraw')) {
+            try {
+                await compileDrawing(file);
+                server.ws.send({
+                    type: 'full-reload',
+                    path: '*'
+                });
+                return [];
+            } catch (e) {
+                console.error('Error compiling drawing:', e);
+            }
+        }
       }
     }
   ],
-  assetsInclude: ['**/*.md'],
+  assetsInclude: ['**/*.md', '**/*.excalidraw'],
   build: {
     outDir: 'dist',
     rollupOptions: {
