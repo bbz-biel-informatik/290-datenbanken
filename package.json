@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run drawings && vite build && npm run pdf",
+    "build": "npm run drawings && vite build",
+    "build:pdf": "npm run drawings && vite build && npm run pdf",
     "preview": "vite preview",
     "drawings": "node src/scripts/compile-drawings.mjs",
     "pdf": "node src/scripts/export-pdfs.mjs",
     "deploy": "npm run build && gh-pages -d dist",
+    "deploy:pdf": "npm run build:pdf && gh-pages -d dist",
     "prepare": "husky"
   },
   "dependencies": {
