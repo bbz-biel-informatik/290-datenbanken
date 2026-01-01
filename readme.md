@@ -24,3 +24,14 @@ npm run deploy
 ```
 
 ! Das ist nötig, da das automatische deployment wegen dem subpath Probleme macht: https://github.com/orgs/community/discussions/61478
+
+
+## Notes
+Bessere Struktur:
+|--|Material 
+|----|ERD
+|------|01-erd.html
+|------|Übungen.md
+|----|SQL
+|------|02-sql.html
+|------|Übungen.md
