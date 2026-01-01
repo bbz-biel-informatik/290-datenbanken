@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Block 2 - Logisches Modell</title>
+    <meta name="description" content="Modul 290 - Block 2: Logisches Modell" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" crossorigin src="../../assets/reveal-setup-gmJAngRX.js"></script>
+    <link rel="stylesheet" crossorigin href="../../assets/reveal-setup-DWrRkUZz.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Block 2: Logisches Modell</h1>
+          <h3>Vom ERD zum Datenbankschema</h3>
+        </section>
+
+        <!-- Recap Block 1 -->
+        <section>
+          <h2>Recap: Block 1</h2>
+          <ul>
+            <li>
+              <strong>ERD</strong>: Konzeptionelles Modell (Entitäten,
+              Attribute, Beziehungen).
+            </li>
+            <li>Wir zeichnen, <em>was</em> wir speichern wollen.</li>
+            <li>Unabhängig von der konkreten Software (DBMS).</li>
+          </ul>
+        </section>
+
+        <!-- Das Relationale Modell -->
+        <section>
+          <section>
+            <h2>Das Relationale Modell</h2>
+            <p>Die Umsetzung des ERDs in eine Tabellenstruktur.</p>
+          </section>
+          <section>
+            <h3>Grundbegriffe</h3>
+            <ul>
+              <li>
+                <strong>Tabelle (Relation)</strong>: Entspricht meist einer
+                Entität.
+              </li>
+              <li>
+                <strong>Spalte (Attribut)</strong>: Eigenschaften der Entität.
+              </li>
+              <li><strong>Zeile (Tupel)</strong>: Ein konkreter Datensatz.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Schlüssel (Keys)</h3>
+            <ul>
+              <li>
+                <strong>Primary Key (PK)</strong>: Eindeutige Identifikation
+                einer Zeile (z.B. ID).
+              </li>
+              <li>
+                <strong>Foreign Key (FK)</strong>: Verweist auf den Primary Key
+                einer anderen Tabelle, um Beziehungen herzustellen.
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Transformation -->
+        <section>
+          <section>
+            <h2>Transformation: ERD &rarr; Tabellen</h2>
+          </section>
+          <section data-markdown>
+            ### 1. Entitäten
+            Jede Entität wird zu einer eigenen Tabelle.
+
+            **Tabelle: KUNDE**
+
+            | ID | Name | Ort | ... |
+            |---|---|---|---|
+            | 1 | Mueller | Biel | ... |
+          </section>
+          <section>
+            <h3>2. Beziehungen: 1:N</h3>
+            <p>
+              <strong>Regel:</strong> Der Fremdschlüssel (FK) kommt auf die
+              "N"-Seite (die Seite mit dem "Krähenfuß").
+            </p>
+            <p><small>Beispiel: Ein Kunde hat viele Bestellungen.</small></p>
+            <img class="r-stretch" src="../../excalidraw/02-relation-1-n.svg" alt="1:N Beziehung">
+          </section>
+          <section>
+            <h3>3. Beziehungen: N:M</h3>
+            <p>
+              <strong>Regel:</strong> Es wird eine
+              <strong>Zwischentabelle</strong> (Join Table) benötigt.
+            </p>
+            <p><small>Beispiel: Student &lt;-&gt; Kurs</small></p>
+            <img class="r-stretch" src="../../excalidraw/02-relation-n-m.svg" alt="N:M Beziehung">
+          </section>
+        </section>
+
+        <!-- Normalisierung -->
+        <section>
+          <section>
+            <h2>Normalisierung</h2>
+            <p>
+              Ziel: Redundanzen (Doppelungen) vermeiden und Inkonsistenzen
+              verhindern.
+            </p>
+          </section>
+          <section>
+            <h3>1. Normalform (1NF)</h3>
+            <p>
+              <strong>Atomare Werte:</strong> Jedes Attribut darf nur einen
+              einzigen Wert enthalten.
+            </p>
+            <p class="fragment text-red-500">
+              Schlecht: Telefonnummern: "0791234567, 0419876543"
+            </p>
+            <p class="fragment text-green-500">
+              Gut: Eigene Tabelle für Telefonnummern oder separate Zeilen.
+            </p>
+          </section>
+          <section>
+            <h3>2. Normalform (2NF)</h3>
+            <p>Nur relevant bei zusammengesetzten Primärschlüsseln.</p>
+            <p>
+              Jedes Nicht-Schlüssel-Attribut muss vom
+              <strong>gesamten</strong> Primärschlüssel abhängen, nicht nur von
+              einem Teil.
+            </p>
+          </section>
+          <section>
+            <h3>3. Normalform (3NF)</h3>
+            <p>Keine transitiven Abhängigkeiten.</p>
+            <p>
+              Nicht-Schlüssel-Attribute dürfen nicht von anderen
+              Nicht-Schlüssel-Attributen abhängen.
+            </p>
+            <p>
+              <small
+                >Beispiel: PLZ bestimmt den Ort. Ort sollte nicht in der
+                Kundentabelle stehen, wenn PLZ schon drin ist (ausser man
+                vereinfacht es bewusst).</small
+              >
+            </p>
+          </section>
+        </section>
+
+        <!-- Übung -->
+        <section>
+          <h2>Übung</h2>
+          <p>
+            Wandeln Sie das folgende Mini-ERD in ein Tabellenschema um (auf
+            Papier oder Texteditor).
+          </p>
+          <ul>
+            <li>Entitäten: <code>Autor</code>, <code>Buch</code></li>
+            <li>Beziehung: Ein Autor schreibt mehrere Bücher (1:N).</li>
+            <li>Attribute erfinden (min. 3 pro Tabelle).</li>
+            <li>Kennzeichnen Sie PK und FK.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      // Check if we are in print mode
+      if (window.location.search.match(/print-pdf/gi)) {
+        // In print mode, we just remove the .fragment class from all elements
+        // so that they are visible.
+        document
+          .querySelectorAll(".fragment")
+          .forEach((el) => el.classList.remove("fragment"));
+      }
+    </script>
+  </body>
+</html>

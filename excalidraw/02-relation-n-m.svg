@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 250" width="570" height="250">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="570" height="250" fill="#ffffff"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 75 30)"><path d="M1.45 -1.22 C28.18 -0.66, 62.24 0.67, 149.28 0.47 M-0.73 -0.08 C41.45 0.73, 81.39 0.79, 150.93 -0.44 M151.34 0.11 C152.17 18.08, 150.48 37.9, 150.11 60.13 M150.54 -0.85 C149.38 17.73, 150.09 33.96, 150.38 59.45 M150.56 59.31 C99.91 60.67, 50.93 59.97, 1.29 61.3 M150.31 60.25 C92.05 59.6, 35.43 59.31, 0.79 59.37 M1.88 61.71 C-1.93 38.61, -0.42 18.58, 0.36 0.78 M0.59 60.64 C-0.18 39.02, -0.97 18.51, -0.85 0.61" stroke="#000000" stroke-width="1" fill="none"></path></g><g transform="translate(50 30) rotate(0 40 10)"><text x="40" y="NaN" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="middle" style="white-space: pre;" direction="ltr">Student</text></g><g stroke-linecap="round" transform="translate(410 10) rotate(0 75 30)"><path d="M-0.83 0.7 C31.55 1.06, 61.13 0.6, 151.69 1.25 M-0.03 0.45 C46.73 -0.94, 94.38 -0.02, 149.76 -0.93 M150.41 0.61 C149.82 18.64, 149.51 38.82, 148.89 58.39 M149.13 -0.45 C150.24 12.21, 151 26.43, 149.19 60.15 M148.67 58.89 C93.27 60.25, 42.16 62.46, 0.96 60.49 M150.43 59.97 C99.1 60.47, 49.47 59.64, 0.67 59.45 M0.44 61.14 C0.92 41.14, -1.04 18.1, 1.54 -1.63 M-0.97 60.64 C0.73 44.06, 0.95 25.41, 0.03 0.58" stroke="#000000" stroke-width="1" fill="none"></path></g><g transform="translate(460 30) rotate(0 20 10)"><text x="20" y="NaN" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="middle" style="white-space: pre;" direction="ltr">Kurs</text></g><g stroke-linecap="round" transform="translate(210 160) rotate(0 75 40)"><path d="M0.88 -1.37 C30.91 -1.23, 60.01 0.53, 150.11 -1.96 M0.67 0.98 C54.02 2.39, 107.36 2.18, 150.6 0.57 M149.49 1.12 C148.82 30.61, 149.9 58.55, 151.67 80.65 M149.73 -0.05 C149.75 27.75, 148.55 57.01, 150 80.86 M150.77 78.46 C90.63 79.84, 29.39 80.96, 0.64 79.68 M150.54 79.68 C106.15 81.34, 63.52 79.96, 0.55 79.54 M-1 80.58 C-0.04 53.48, 2.54 29.26, -1.27 -0.04 M-0.54 80.64 C0.34 62.93, -0.42 45.97, 0.91 0.56" stroke="#e03131" stroke-width="1" fill="none"></path></g><g transform="translate(220 170) rotate(0 65 30)"><text x="0" y="NaN" font-family="Virgil, Segoe UI Emoji" font-size="16px" fill="#e03131" text-anchor="start" style="white-space: pre;" direction="ltr">STUDENT_KURS</text><text x="0" y="NaN" font-family="Virgil, Segoe UI Emoji" font-size="16px" fill="#e03131" text-anchor="start" style="white-space: pre;" direction="ltr">- Student_ID (FK)</text><text x="0" y="NaN" font-family="Virgil, Segoe UI Emoji" font-size="16px" fill="#e03131" text-anchor="start" style="white-space: pre;" direction="ltr">- Kurs_ID (FK)</text></g></svg>

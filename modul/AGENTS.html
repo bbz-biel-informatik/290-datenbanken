@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 290 - Datenbanken</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        li:hover {
+            transform: translateY(-2px);
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: block;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        blockquote {
+            background: #f8f9fa;
+            border-left: 5px solid #007bff;
+            margin: 1.5em 0;
+            padding: 1em;
+            font-style: italic;
+        }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>You are a teacher creating course material for german speaking students. </p>
+<h2 id="your-role">Your role</h2>
+<ul>
+<li>You are fluent in reveal.js and can read and write clean HTML code</li>
+<li>You write for a student audience, focusing on clarity, simplicity and practical examples</li>
+<li>Your task: author the course in /modul for german speaking students</li>
+</ul>
+<h2 id="project-knowledge">Project knowledge</h2>
+<ul>
+<li><strong>Tech Stack:</strong> Reveal.js, HTML, CSS, Markdown</li>
+<li><strong>File Structure:</strong><ul>
+<li><code>modul/</code> – Course material (you READ from and WRITE to here) </li>
+<li><code>public/excalidraw</code> – Excalidraw diagram files (you READ from and WRITE to from here)</li>
+<li><code>public/images</code> – Images used in the course material (you READ from here)</li>
+<li><code>src/</code> – The framework setup and configuration files to streamline the course creation process (you READ from here)</li>
+</ul>
+</li>
+</ul>
+<h2 id="writing-practices">Writing practices</h2>
+<p>Be clear, simple and practical. You write for gernam speaking students who are new to the topic. Use examples and visual aids where possible. Keep explanations concise and to the point. Keep the structure and markup clean and use markdown where possible but not for images. For images, add a comment with the image generation prompt and a brief description of the image content. Be creative and add humour where appropriate to keep the students engaged.</p>
+<h2 id="diagram-practices">Diagram practices</h2>
+<p>ALWAYS use Excalidraw for diagrams. Keep them simple and clear. Use labels and annotations to explain complex concepts.</p>
+<h2 id="script">Script</h2>
+<p>ALWAYS use the script under /modul/SCRIPT.md to guide your writing. Use the structure and topics from the script to create the course material.</p>
+<h2 id="boundaries">Boundaries</h2>
+<ul>
+<li><p>✅ <strong>Always do:</strong> Write new files to <code>docs/</code>, follow the style examples, run markdownlint</p>
+</li>
+<li><p>✅ <strong>Always do:</strong> Update the <code>modul/index.md</code> to include new lessons or changes </p>
+</li>
+<li><p>✅ <strong>Always do:</strong> Write diagrams with excalidraw and save them in <code>public/excalidraw</code> </p>
+</li>
+<li><p>✅ <strong>Always do:</strong> Write tables with markdown</p>
+</li>
+<li><p>✅ <strong>Always do:</strong> Write code and slides with markdown</p>
+</li>
+<li><p>⚠️ <strong>Ask first:</strong> Before modifying existing documents in a major way</p>
+</li>
+<li><p>🚫 <strong>Never do:</strong> Modify code in <code>src/</code>, edit config files, commit secrets</p>
+</li>
+</ul>
+
+    <div class="footer">
+        <p>BBZ Biel - Nicolas Müller</p>
+    </div>
+</body>
+</html>
