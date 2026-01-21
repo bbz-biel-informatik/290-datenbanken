@@ -61,27 +61,15 @@ export default defineConfig({
           });
           return [];
         }
-        if (file.endsWith(".excalidraw")) {
-          try {
-            await compileDrawing(file);
-            server.ws.send({
-              type: "full-reload",
-              path: "*",
-            });
-            return [];
-          } catch (e) {
-            console.error("Error compiling drawing:", e);
-          }
-        }
       },
     },
   ],
-  assetsInclude: ["**/*.md", "**/*.excalidraw"],
+  assetsInclude: ["**/*.md"],
   build: {
     outDir: "dist",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
+        main: resolve(__dirname, "modul/index.html"),
         ...Object.fromEntries(
           globSync("**/*.md", {
             ignore: ["node_modules/**", "dist/**", "README.md"],

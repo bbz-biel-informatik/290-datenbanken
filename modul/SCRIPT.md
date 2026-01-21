@@ -6,7 +6,12 @@ Dieser Block führt in die Grundlagen von Datenbanken ein, einschließlich der K
 ## Block 2 - Logisches Schema
 In diesem Block geht es darum, vom ERD zum logischen Schema zu gelangen und die Struktur der Datenbank zu definieren.
 
+## Block 3 - Einschränkungen
+Dieser Block behandelt die verschiedenen Arten von Einschränkungen, die in Datenbanken verwendet werden, um die Datenintegrität zu gewährleisten.
+
 ## Block 3 - Repetition und Prüfungsvorbereitung
 Dieser Block dient der Wiederholung der bisherigen Inhalte und der Vorbereitung auf die schriftliche Prüfung.
 
-## Block 4 - DBMS und SQL Einführung
+## Block 4 - Prüfung
+
+## Block 5 - DBMS und SQL Einführung

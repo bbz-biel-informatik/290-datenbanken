@@ -105,7 +105,10 @@ async function collectHtmlFiles(dir) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       files.push(...(await collectHtmlFiles(fullPath)));
-    } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) {
+    } else if (
+      entry.isFile() &&
+      entry.name.toLowerCase().endsWith(".slides.html")
+    ) {
       files.push(fullPath);
     }
   }
@@ -136,7 +139,7 @@ async function startServer(rootDir) {
       }
 
       if (stat.isDirectory()) {
-        filePath = path.join(filePath, "index.html");
+        filePath = path.join(filePath, "modul/index.html");
         try {
           stat = await fs.stat(filePath);
         } catch {
