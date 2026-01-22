@@ -98,7 +98,7 @@ export const template = `<!DOCTYPE html>
 export async function compilePage(filePath) {
   const markdown = fs.readFileSync(filePath, "utf-8");
   let htmlContent = marked.parse(markdown);
-  htmlContent = htmlContent.replaceAll("\\.md", ".html");
+  htmlContent = htmlContent.replaceAll(".md", ".html");
   return template.replace("{{content}}", htmlContent);
 }
 
