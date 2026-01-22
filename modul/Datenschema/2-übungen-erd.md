@@ -1,4 +1,4 @@
-# 2 - Übungen ERD  
+# Übungen ERD  
 
 Zeichne für die folgenden Anforderungen je ein ER-Diagramm: 
 

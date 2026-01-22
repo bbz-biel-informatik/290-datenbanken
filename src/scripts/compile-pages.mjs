@@ -1,12 +1,12 @@
-import fs from 'fs';
-import path from 'path';
-import { marked } from 'marked';
-import { glob } from 'glob';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { marked } from "marked";
+import { glob } from "glob";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, '..', '..');
+const projectRoot = path.resolve(__dirname, "..", "..");
 
 export const template = `<!DOCTYPE html>
 <html lang="en">
@@ -96,35 +96,36 @@ export const template = `<!DOCTYPE html>
 </html>`;
 
 export async function compilePage(filePath) {
-    const markdown = fs.readFileSync(filePath, 'utf-8');
-    const htmlContent = marked.parse(markdown);
-    return template.replace('{{content}}', htmlContent);
+  const markdown = fs.readFileSync(filePath, "utf-8");
+  let htmlContent = marked.parse(markdown);
+  htmlContent = htmlContent.replaceAll("\\.md", ".html");
+  return template.replace("{{content}}", htmlContent);
 }
 
 async function main() {
-    // Compile markdown files to dist
-    const files = await glob('**/*.md', { 
-        cwd: projectRoot, 
-        ignore: ['node_modules/**', 'dist/**', 'README.md'] 
-    });
-    
-    for (const file of files) {
-        const filePath = path.join(projectRoot, file);
-        const finalHtml = await compilePage(filePath);
-        
-        // Output to dist preserving structure
-        const relativePath = file; // relative to root
-        const htmlFileName = relativePath.replace(/\.md$/, '.html');
-        const outputFilePath = path.join(projectRoot, 'dist', htmlFileName);
-        
-        fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
-        
-        fs.writeFileSync(outputFilePath, finalHtml);
-        console.log(`Compiled ${file} to ${outputFilePath}`);
-    }
+  // Compile markdown files to dist
+  const files = await glob("**/*.md", {
+    cwd: projectRoot,
+    ignore: ["node_modules/**", "dist/**", "README.md"],
+  });
+
+  for (const file of files) {
+    const filePath = path.join(projectRoot, file);
+    const finalHtml = await compilePage(filePath);
+
+    // Output to dist preserving structure
+    const relativePath = file; // relative to root
+    const htmlFileName = relativePath.replace(/\.md$/, ".html");
+    const outputFilePath = path.join(projectRoot, "dist", htmlFileName);
+
+    fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
+
+    fs.writeFileSync(outputFilePath, finalHtml);
+    console.log(`Compiled ${file} to ${outputFilePath}`);
+  }
 }
 
 // Check if running directly
 if (process.argv[1] === __filename) {
-    main().catch(console.error);
+  main().catch(console.error);
 }
