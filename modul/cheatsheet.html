@@ -34,37 +34,26 @@
 <hr>
 <h2 id="1-datenbank-modellierung-erd--logisches-schema">1. Datenbank-Modellierung (ERD &amp; Logisches Schema)</h2>
 <p>Bevor SQL geschrieben wird, muss die Struktur geplant werden.</p>
+<p><strong>ERD (Entity-Relationship-Diagram):</strong></p>
 <ul>
-<li><p><strong>ERD (Entity-Relationship-Diagram):</strong></p>
-</li>
-<li><p><strong>Entität (Rechteck):</strong> Ein Objekt, z. B. <code>Athlet</code>, <code>Ski</code>.</p>
-</li>
-<li><p><strong>Attribut (Oval):</strong> Eigenschaften, z. B. <code>Name</code>, <code>Marke</code>, <code>Geburtsdatum</code>.</p>
-</li>
-<li><p><strong>Beziehung (Raute):</strong> Verknüpfung zwischen Objekten, z. B. <code>besitzt</code>.</p>
-</li>
-<li><p><strong>Kardinalitäten:</strong></p>
-</li>
-<li><p><strong>1:1:</strong> Ein Fahrer hat ein Taxi.</p>
-</li>
-<li><p><strong>1:n:</strong> Ein Team hat viele Spieler (Fremdschlüssel auf der „vielen“-Seite).</p>
-</li>
-<li><p><strong>n:m:</strong> Ein Lernender besucht viele Kurse; ein Kurs hat viele Lernende. (Benötigt eine <strong>Zwischentabelle</strong>).</p>
-</li>
-<li><p><strong>Datentypen:</strong></p>
-</li>
-<li><p><code>INT</code> / <code>INTEGER</code>: Ganzzahlen.</p>
-</li>
-<li><p><code>SERIAL</code>: Automatisch hochzählende ID (Primärschlüssel).</p>
-</li>
-<li><p><code>FLOAT</code>: Dezimalzahlen (z. B. Körpergröße 1.85).</p>
-</li>
-<li><p><code>TEXT</code>: Beliebiger Text (auch URLs).</p>
-</li>
-<li><p><code>DATE</code>: Datum im Format <code>YYYY-MM-DD</code>.</p>
-</li>
-<li><p>Es gibt noch mehr: <a href="https://www.w3schools.com/sql/sql_datatypes.asp">https://www.w3schools.com/sql/sql_datatypes.asp</a></p>
-</li>
+<li><strong>Entität (Rechteck):</strong> Ein Objekt, z. B. <code>Athlet</code>, <code>Ski</code>.</li>
+<li><strong>Attribut (Oval):</strong> Eigenschaften, z. B. <code>Name</code>, <code>Marke</code>, <code>Geburtsdatum</code>.</li>
+<li><strong>Beziehung (Raute):</strong> Verknüpfung zwischen Objekten, z. B. <code>besitzt</code>.</li>
+</ul>
+<p><strong>Kardinalitäten:</strong></p>
+<ul>
+<li><strong>1:1:</strong> Ein Fahrer hat ein Taxi.</li>
+<li><strong>1:n:</strong> Ein Team hat viele Spieler (Fremdschlüssel auf der „vielen“-Seite).</li>
+<li><strong>n:m:</strong> Ein Lernender besucht viele Kurse; ein Kurs hat viele Lernende. (Benötigt eine <strong>Zwischentabelle</strong>).</li>
+</ul>
+<p><strong>Datentypen:</strong></p>
+<ul>
+<li><code>INT</code> / <code>INTEGER</code>: Ganzzahlen.</li>
+<li><code>SERIAL</code>: Automatisch hochzählende ID (Primärschlüssel).</li>
+<li><code>FLOAT</code>: Dezimalzahlen (z. B. Körpergröße 1.85).</li>
+<li><code>TEXT</code>: Beliebiger Text (auch URLs).</li>
+<li><code>DATE</code>: Datum im Format <code>YYYY-MM-DD</code>.</li>
+<li>Es gibt noch mehr: <a href="https://www.w3schools.com/sql/sql_datatypes.asp">https://www.w3schools.com/sql/sql_datatypes.asp</a></li>
 </ul>
 <hr>
 <h2 id="2-tabellen-erstellen--verwalten-ddl">2. Tabellen erstellen &amp; verwalten (DDL)</h2>
