@@ -6,19 +6,19 @@ Dieses SQL-Cheatsheet basiert exklusiv auf den Inhalten deiner Präsentationen u
 
 Bevor SQL geschrieben wird, muss die Struktur geplant werden.
 
-* **ERD (Entity-Relationship-Diagram):**
+**ERD (Entity-Relationship-Diagram):**
 * **Entität (Rechteck):** Ein Objekt, z. B. `Athlet`, `Ski`.
 * **Attribut (Oval):** Eigenschaften, z. B. `Name`, `Marke`, `Geburtsdatum`.
 * **Beziehung (Raute):** Verknüpfung zwischen Objekten, z. B. `besitzt`.
 
 
-* **Kardinalitäten:**
+**Kardinalitäten:**
 * **1:1:** Ein Fahrer hat ein Taxi.
 * **1:n:** Ein Team hat viele Spieler (Fremdschlüssel auf der „vielen“-Seite).
 * **n:m:** Ein Lernender besucht viele Kurse; ein Kurs hat viele Lernende. (Benötigt eine **Zwischentabelle**).
 
 
-* **Datentypen:**
+**Datentypen:**
 * `INT` / `INTEGER`: Ganzzahlen.
 * `SERIAL`: Automatisch hochzählende ID (Primärschlüssel).
 * `FLOAT`: Dezimalzahlen (z. B. Körpergröße 1.85).
