@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 290 - Datenbanken</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+        }
+        .markdown-body img {
+            background-color: white;
+        }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="markdown-body">
+    <h1 id="📸-übung-instagram">📸 Übung Instagram</h1>
+<p>Deine Aufgabe ist es, mit SQL-Befehlen (<code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code>) unser soziales Netzwerk zu befüllen. Nutze die Struktur unserer Datenbank, um die folgenden Aktionen durchzuführen. <strong>Notiere dir zu jeder Aufgabe den SQL-Befehl, den du verwendet hast</strong> Schaue dir die Datenbankstruktur an und überlege dir, wie du die Aufgaben am besten löst.</p>
+<h2 id="datenbankstruktur">Datenbankstruktur</h2>
+<p><img src="../../assets/Unbenanntes%20Diagramm.drawio-OTDfWgnb.svg" alt="alt text"></p>
+<h2 id="teil-1-dein-profil--dein-content-insert--select">Teil 1: Dein Profil &amp; Dein Content (INSERT &amp; SELECT)</h2>
+<p><strong>1 - Erstelle dein eigenes Konto</strong> 
+Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden: <a href="https://getavataaars.com/">https://getavataaars.com/</a></p>
+<p><strong>2 - Veröffentliche einen ersten Beitrag</strong>
+Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Finde dazu ein Bild im Internet, wähle dann mit rechtsklick &quot;url kopieren&quot; und füge das geeignet in die Tabellenstruktur ein.</p>
+<p><strong>3 - Lass dir den Feed anzeigen</strong>
+Schreibe ein Query, welches dir den aktuellen Feed anzeigt.</p>
+<p><strong>4 - Finde den Account deines Sitznachbarn</strong>
+Suche in der Datenbank gezielt den Account deines Sitznachbarns. Notiere dier die <code>id</code>!</p>
+<p><strong>5 - Schau dir die Beiträge deines Nachbarn an:</strong>
+Lass dir nur die Posts anzeigen, die von der <code>user_id</code> deines Sitznachbarn erstellt wurden.</p>
+<p><strong>6 - Kommentiere einen Beitrag</strong>
+Schreibe einen Kommentar unter einen Beitrag deiner Wahl.</p>
+<p><strong>7 - Verteile ein paar Likes</strong>
+Suche dir 2-3 andere Beiträge aus dem Feed aus und erhöhe deren Like-Zahl um jeweils 1. <em>(Achtung: Denk unbedingt an die <code>WHERE</code>-Klausel, sonst likest du aus Versehen jeden Post in der Datenbank!)</em></p>
+<h2 id="teil-2">Teil 2:</h2>
+<p><strong>Teil 3: Kommunikation &amp; Analyse (Fortgeschrittene Abfragen)</strong>
+8. <strong>Schreibe eine Direktnachricht:</strong> Beginne einen Chat mit einem anderen Nutzer. Erstelle dazu zuerst eine Nachricht in der <code>chats</code>-Tabelle und verknüpfe danach eure beiden User-IDs mit der neuen Chat-ID in der <code>chats_users</code>-Tabelle.
+9. <strong>Prüfe deinen Posteingang:</strong> Schreibe eine Abfrage, um zu sehen, in welchen Chats du Mitglied bist (Suche nach deiner <code>user_id</code> in der <code>chats_users</code>-Tabelle).
+10. <strong>Finde den beliebtesten Beitrag:</strong> Wer ist der Star unserer Klasse? Finde den Post mit den absolut meisten Likes heraus. <em>(Tipp: Schau dir dazu einmal die Befehle <code>ORDER BY</code> und <code>LIMIT</code> an).</em></p>
+<hr>
+
+    <div class="footer">
+        <p>BBZ Biel - Nicolas Müller</p>
+    </div>
+</body>
+</html>
