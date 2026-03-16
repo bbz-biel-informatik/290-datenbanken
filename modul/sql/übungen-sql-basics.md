@@ -18,6 +18,7 @@ https://sqlproject.coffee-journal.com/exercises/5
 Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden: https://getavataaars.com/
 
 **2 - Veröffentliche einen ersten Beitrag**
+Hinweis: Finde zuerst deine eigene ID im System mit einem SELECT QUERY<br> 
 Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Finde dazu ein Bild im Internet, wähle dann mit rechtsklick "url kopieren" und füge das geeignet in die Tabellenstruktur ein.
 
 ## Teil 2: Beiträge anzeigen (INSERT / SELECT)
