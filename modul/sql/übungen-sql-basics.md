@@ -14,22 +14,22 @@ https://sqlproject.coffee-journal.com/exercises/5
 
 ## Teil 1: Dein Profil & Dein Content (INSERT) 
 
-**1 - Erstelle dein eigenes Konto** 
-Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden: https://getavataaars.com/
+**1 - Erstelle dein eigenes Konto**<br> 
+Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden (oder auch etwas anderes): https://getavataaars.com/
 
-**2 - Veröffentliche einen ersten Beitrag**
+**2 - Veröffentliche einen ersten Beitrag**<br>
 Hinweis: Finde zuerst deine eigene ID im System mit einem SELECT QUERY<br> 
 Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Finde dazu ein Bild im Internet, wähle dann mit rechtsklick "url kopieren" und füge das geeignet in die Tabellenstruktur ein.
 
 ## Teil 2: Beiträge anzeigen (INSERT / SELECT)
 
-**3 - Lass dir den Feed anzeigen**
+**3 - Lass dir den Feed anzeigen**<br>
 Schreibe ein Query, welches dir den aktuellen Feed anzeigt.
 
-**4 - Finde den Account deines Sitznachbarn**
+**4 - Finde den Account deines Sitznachbarn**<br>
 Suche in der Datenbank gezielt den Account deines Sitznachbarns. Notiere dier die `id`!
 
-**5 - Schau dir die Beiträge deines Nachbarn an:**
+**5 - Schau dir die Beiträge deines Nachbarn an:**<br>
 Lass dir nur die Posts anzeigen, die von der `user_id` deines Sitznachbarn erstellt wurden.
 
 **6 - Kommentare**
