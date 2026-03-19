@@ -15,7 +15,11 @@ https://sqlproject.coffee-journal.com/exercises/5
 ## Teil 1: Dein Profil & Dein Content (INSERT) 
 
 **1 - Erstelle dein eigenes Konto**<br> 
-Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden (oder auch etwas anderes): https://getavataaars.com/
+Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden: https://getavataaars.com/ Du brauchst dabei nur die URL, welche du mit klick uf "show png" anschauen kannst. Dir wird dann das image tag angezeigt, stelle aber sicher dass du nur die url kopierst. So wie unten beschrieben.
+<br>
+
+<img src="avataars.png" alt="drawing" style="width:600px;"/>
+
 
 **2 - Veröffentliche einen ersten Beitrag**<br>
 Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Finde dazu ein Bild im Internet, wähle dann mit rechtsklick "url kopieren" und füge das geeignet in die Tabellenstruktur ein.
