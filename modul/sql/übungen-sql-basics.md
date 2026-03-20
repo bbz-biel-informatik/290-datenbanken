@@ -16,7 +16,7 @@ Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen 
 <img src="avataars.png" alt="drawing" style="width:600px;"/>
 
 
-**2 - Veröffentliche einen ersten Beitrag**<br>
+**2 - Veröffentliche einen ersten Beitrag**<br><br>
 **!Content Richtlinien!**
 **Kein Content zu Rassismus, Sexismus, Gewalt oder Diskriminierung. Humor darf sein, aber bitte mit dem nötigen Taktgefühl**
 
