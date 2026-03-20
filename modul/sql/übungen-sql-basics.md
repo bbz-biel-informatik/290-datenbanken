@@ -21,7 +21,7 @@ Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Find
 <br><br>
 
 **!Content Richtlinien!**
-**Kein Content zu Rassismus, Sexismus, Gewalt oder Diskriminierung. Humor darf sein, aber bitte mit dem nötigen Taktgefühl**
+**Kein Content zu Rassismus, Sexismus, Gewalt oder Diskriminierung. Humor darf sein, aber bitte mit dem nötigen Taktgefühl. Wenn etwas gelöscht werden soll, melde dich bei mir im Teams.**
 
 
 **3 - Kommentiere einen Beitrag**<br>
