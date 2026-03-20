@@ -17,6 +17,9 @@ Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen 
 
 
 **2 - Veröffentliche einen ersten Beitrag**<br>
+**!Content Richtlinien!**
+**Kein Content zu Rassismus, Sexismus, Gewalt oder Diskriminierung. Humor darf sein, aber bitte mit dem nötigen Taktgefühl**
+
 Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Finde dazu ein Bild im Internet, wähle dann mit rechtsklick "url kopieren" und füge das geeignet in die Tabellenstruktur ein.
 
 **3 - Kommentiere einen Beitrag**<br>
