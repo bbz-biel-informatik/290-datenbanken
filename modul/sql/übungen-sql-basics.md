@@ -1,16 +1,16 @@
 # 📸 SQL Basics mit instagram 
 
-Wir haben ein sozialies Netzwerk aufgesetzt, auf welchem wir Accounts, Posts und Kommentare erstellen können. Die URL des Netzwerks ist:<br>
+Wir haben ein sozialies Netzwerk aufgesetzt, auf welchem wir Accounts, Posts und Kommentare erstellen können. Das Netzwerk findest du unter:<br>
 https://playgroundinsta.coffee-journal.com/feed
 <br><br>
-Deine Aufgabe ist es nun, dieses Netzwerk mit Daten zu befüllen. Nutze dazu geeignete SQL Befehle wie `INSERT`, `SELECT`, `UPDATE` und `DELETE`. Die SQL Befehle kannst du unter https://sqlproject.coffee-journal.com/exercises/5 ausführen. Dort siehtst du ein Query editor, wie auch bereits im Projekt und kannst die SQL Befehle direkt ausführen. Schaue dir die Datenbankstruktur an!
+Deine Aufgabe ist es nun, dieses Netzwerk mit Daten zu befüllen. Nutze dazu geeignete SQL Befehle wie `INSERT`, `SELECT`, `UPDATE` und `DELETE`. Die SQL Befehle kannst du unter https://sqlproject.coffee-journal.com/exercises/5 ausführen. Dort siehtst du ein Query editor, wie auch bereits im Projekt und kannst die SQL Befehle direkt ausführen.
 
 **Notiere dir zu jeder Aufgabe den SQL-Befehl, den du verwendet hast**
 
 ## Teil 1: Dein Profil & Dein Content (INSERT) 
 
 **1 - Erstelle dein eigenes Konto**<br> 
-Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden: https://getavataaars.com/ Du brauchst dabei nur die URL, welche du mit klick uf "show png" anschauen kannst. Dir wird dann das image tag angezeigt, stelle aber sicher dass du nur die url kopierst. So wie unten beschrieben.
+Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden: https://getavataaars.com/ Du brauchst dabei nur die URL, welche du mit klick uf "show png" anschauen kannst. Dir wird dann das image tag angezeigt, stelle aber sicher dass du nur die url kopierst. So wie unten beschrieben. Wenn du deinen Account gemacht hast, solltest du ihn auf dem Netzwerk sehen.
 <br>
 
 <img src="avataars.png" alt="drawing" style="width:600px;"/>
