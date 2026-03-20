@@ -1,16 +1,11 @@
 # 📸 SQL Basics mit instagram 
 
-Deine Aufgabe ist es, mit SQL-Befehlen (`INSERT`, `SELECT`, `UPDATE`) unser soziales Netzwerk zu befüllen. Nutze die Struktur unserer Datenbank, um die folgenden Aktionen durchzuführen. **Notiere dir zu jeder Aufgabe den SQL-Befehl, den du verwendet hast** Schaue dir die Datenbankstruktur an und überlege dir, wie du die Aufgaben am besten löst.
-
-Sehe das Netzwerk live hier:
+Wir haben ein sozialies Netzwerk aufgesetzt, auf welchem wir Accounts, Posts und Kommentare erstellen können. Die URL des Netzwerks ist:<br>
 https://playgroundinsta.coffee-journal.com/feed
+<br><br>
+Deine Aufgabe ist es nun, dieses Netzwerk mit Daten zu befüllen. Nutze dazu geeignete SQL Befehle wie `INSERT`, `SELECT`, `UPDATE` und `DELETE`. Die SQL Befehle kannst du unter https://sqlproject.coffee-journal.com/exercises/5 ausführen. Dort siehtst du ein Query editor, wie auch bereits im Projekt und kannst die SQL Befehle direkt ausführen. Schaue dir die Datenbankstruktur an!
 
-Die Übungen können auf dem sql tool hier gemacht werden:
-https://sqlproject.coffee-journal.com/exercises/5
-
-
-## Datenbankstruktur
-![alt text](<Unbenanntes Diagramm.drawio.svg>)
+**Notiere dir zu jeder Aufgabe den SQL-Befehl, den du verwendet hast**
 
 ## Teil 1: Dein Profil & Dein Content (INSERT) 
 
@@ -27,43 +22,50 @@ Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Find
 **3 - Kommentiere einen Beitrag**<br>
 Finde einen Beitrag und schreibe einen Kommentar.
 
+**4 - Schreibe eine Nachricht**
+Schreibe eine Nachricht an einen beliebigen account.
+
+**5 - Für andere Benutzer posten**
+Wie könntest du einen Post im Namen eines anderen Benutzers erstellen?
+
 ## Teil 2: Beiträge anzeigen (INSERT / SELECT)
 
-**4 - Lass dir den Feed anzeigen**<br>
+**6 - Lass dir den Feed anzeigen**<br>
 Schreibe ein Query, welches dir den aktuellen Feed anzeigt.
 
-**5 - Finde den Account deines Sitznachbarn**<br>
+**7 - Finde den Account deines Sitznachbarn**<br>
 Suche in der Datenbank gezielt den Account deines Sitznachbarns. Notiere dier die `id`!
 
-**6 - Schau dir die Beiträge deines Nachbarn an:**<br>
+**8 - Posts finden**<br>
+- Finde alle Posts, welche in Thun gemacht wurden
+- Finde alle Posts, welche mehr als 1000 Likes haben
+- Finde alle Posts, welche zwischen 500 und 1000 Likes haben
+
+**9 - Schau dir die Beiträge deines Nachbarn an:**<br>
 Lass dir nur die Posts anzeigen, die von der `user_id` deines Sitznachbarn erstellt wurden.
 
-**7 - Komentare anzeigen**<br>
+**10 - Komentare anzeigen**<br>
 Schaue dir die Kommentare unter deinem Post an.
+
+**11 - Accounts finden**
+- Finde alle accounts, welche mit "leo" beginnen
+- Finde alle accounts, welche "emma" im Namen haben.
 
 ## Teil 3: Likes / Edits / Mehr Select
 
-**8 - Verteile ein paar Likes**<br>
+**12 - Verteile ein paar Likes**<br>
 Suche dir 2-3 andere Beiträge aus dem Feed aus und erhöhe deren Like-Zahl um jeweils 1. *(Achtung: Denk unbedingt an die `WHERE`-Klausel, sonst likest du aus Versehen jeden Post in der Datenbank!)*
 
-**9 - Verändere einen Post**<br>
+**13 - Verändere einen Post**<br>
 Finde den Post, welchen du zu Beginn gemacht hast und ändere das bild oder die Beschreibung
 
-**10 - Benutzer finden**<br>
-Finde alle Benutzer, welche "caprio" im Namen haben 
-
-**11 - Posts finden**<br>
-- Finde alle Posts, welche in Thun gemacht wurden
-- Finde alle Posts, welche mehr als 5 Likes haben
-- Finde alle Posts, welche zwischen 5 und 10 Likes haben
-
-**12 - Nachricht senden**<br>
+**14 - Nachricht senden**<br>
 Sende eine Chatnachricht an eine ander Person im Netzwerk
 
-**13 - Inbox anzeigen**<br>
+**15 - Inbox anzeigen**<br>
 Schaue dir deine Inbox, um Nachrichten anzusehen.
 
-**14 - Welcher Beitrag hat die meisten likes?**<br>
+**16 - Welcher Beitrag hat die meisten likes?**<br>
 Finde den Beitrag, welcher die meisten likes hat.
 
 
