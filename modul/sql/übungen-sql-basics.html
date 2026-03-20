@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 290 - Datenbanken</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-light.min.css">
     <style>
         body {
             box-sizing: border-box;
@@ -31,13 +31,11 @@
 </head>
 <body class="markdown-body">
     <h1 id="📸-sql-basics-mit-instagram">📸 SQL Basics mit instagram</h1>
-<p>Deine Aufgabe ist es, mit SQL-Befehlen (<code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code>) unser soziales Netzwerk zu befüllen. Nutze die Struktur unserer Datenbank, um die folgenden Aktionen durchzuführen. <strong>Notiere dir zu jeder Aufgabe den SQL-Befehl, den du verwendet hast</strong> Schaue dir die Datenbankstruktur an und überlege dir, wie du die Aufgaben am besten löst.</p>
-<p>Sehe das Netzwerk live hier:
-<a href="https://playgroundinsta.coffee-journal.com/feed">https://playgroundinsta.coffee-journal.com/feed</a></p>
-<p>Die Übungen können auf dem sql tool hier gemacht werden:
-<a href="https://sqlproject.coffee-journal.com/exercises/5">https://sqlproject.coffee-journal.com/exercises/5</a></p>
-<h2 id="datenbankstruktur">Datenbankstruktur</h2>
-<p><img src="../../assets/Unbenanntes%20Diagramm.drawio-bbewZJqN.svg" alt="alt text"></p>
+<p>Wir haben ein sozialies Netzwerk aufgesetzt, auf welchem wir Accounts, Posts und Kommentare erstellen können. Die URL des Netzwerks ist:<br>
+<a href="https://playgroundinsta.coffee-journal.com/feed">https://playgroundinsta.coffee-journal.com/feed</a>
+<br><br>
+Deine Aufgabe ist es nun, dieses Netzwerk mit Daten zu befüllen. Nutze dazu geeignete SQL Befehle wie <code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code> und <code>DELETE</code>. Die SQL Befehle kannst du unter <a href="https://sqlproject.coffee-journal.com/exercises/5">https://sqlproject.coffee-journal.com/exercises/5</a> ausführen. Dort siehtst du ein Query editor, wie auch bereits im Projekt und kannst die SQL Befehle direkt ausführen. Schaue dir die Datenbankstruktur an!</p>
+<p><strong>Notiere dir zu jeder Aufgabe den SQL-Befehl, den du verwendet hast</strong></p>
 <h2 id="teil-1-dein-profil--dein-content-insert">Teil 1: Dein Profil &amp; Dein Content (INSERT)</h2>
 <p><strong>1 - Erstelle dein eigenes Konto</strong><br> 
 Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen kannst. Als Profilbild kannst du diese Seite verwenden: <a href="https://getavataaars.com/">https://getavataaars.com/</a> Du brauchst dabei nur die URL, welche du mit klick uf &quot;show png&quot; anschauen kannst. Dir wird dann das image tag angezeigt, stelle aber sicher dass du nur die url kopierst. So wie unten beschrieben.
@@ -49,33 +47,40 @@ Schaue dir die Datenstruktur an und überlege dir, wie du einen Benutzer machen 
 Suche ein Bild, welches du posten kannst. Das Bild wird als URL eingefügt. Finde dazu ein Bild im Internet, wähle dann mit rechtsklick &quot;url kopieren&quot; und füge das geeignet in die Tabellenstruktur ein.</p>
 <p><strong>3 - Kommentiere einen Beitrag</strong><br>
 Finde einen Beitrag und schreibe einen Kommentar.</p>
+<p><strong>4 - Schreibe eine Nachricht</strong>
+Schreibe eine Nachricht an einen beliebigen account.</p>
+<p><strong>5 - Für andere Benutzer posten</strong>
+Wie könntest du einen Post im Namen eines anderen Benutzers erstellen?</p>
 <h2 id="teil-2-beiträge-anzeigen-insert--select">Teil 2: Beiträge anzeigen (INSERT / SELECT)</h2>
-<p><strong>4 - Lass dir den Feed anzeigen</strong><br>
+<p><strong>6 - Lass dir den Feed anzeigen</strong><br>
 Schreibe ein Query, welches dir den aktuellen Feed anzeigt.</p>
-<p><strong>5 - Finde den Account deines Sitznachbarn</strong><br>
+<p><strong>7 - Finde den Account deines Sitznachbarn</strong><br>
 Suche in der Datenbank gezielt den Account deines Sitznachbarns. Notiere dier die <code>id</code>!</p>
-<p><strong>6 - Schau dir die Beiträge deines Nachbarn an:</strong><br>
-Lass dir nur die Posts anzeigen, die von der <code>user_id</code> deines Sitznachbarn erstellt wurden.</p>
-<p><strong>7 - Komentare anzeigen</strong><br>
-Schaue dir die Kommentare unter deinem Post an.</p>
-<h2 id="teil-3-likes--edits--mehr-select">Teil 3: Likes / Edits / Mehr Select</h2>
-<p><strong>8 - Verteile ein paar Likes</strong><br>
-Suche dir 2-3 andere Beiträge aus dem Feed aus und erhöhe deren Like-Zahl um jeweils 1. <em>(Achtung: Denk unbedingt an die <code>WHERE</code>-Klausel, sonst likest du aus Versehen jeden Post in der Datenbank!)</em></p>
-<p><strong>9 - Verändere einen Post</strong><br>
-Finde den Post, welchen du zu Beginn gemacht hast und ändere das bild oder die Beschreibung</p>
-<p><strong>10 - Benutzer finden</strong><br>
-Finde alle Benutzer, welche &quot;caprio&quot; im Namen haben </p>
-<p><strong>11 - Posts finden</strong><br></p>
+<p><strong>8 - Posts finden</strong><br></p>
 <ul>
 <li>Finde alle Posts, welche in Thun gemacht wurden</li>
-<li>Finde alle Posts, welche mehr als 5 Likes haben</li>
-<li>Finde alle Posts, welche zwischen 5 und 10 Likes haben</li>
+<li>Finde alle Posts, welche mehr als 1000 Likes haben</li>
+<li>Finde alle Posts, welche zwischen 500 und 1000 Likes haben</li>
 </ul>
-<p><strong>12 - Nachricht senden</strong><br>
+<p><strong>9 - Schau dir die Beiträge deines Nachbarn an:</strong><br>
+Lass dir nur die Posts anzeigen, die von der <code>user_id</code> deines Sitznachbarn erstellt wurden.</p>
+<p><strong>10 - Komentare anzeigen</strong><br>
+Schaue dir die Kommentare unter deinem Post an.</p>
+<p><strong>11 - Accounts finden</strong></p>
+<ul>
+<li>Finde alle accounts, welche mit &quot;leo&quot; beginnen</li>
+<li>Finde alle accounts, welche &quot;emma&quot; im Namen haben.</li>
+</ul>
+<h2 id="teil-3-likes--edits--mehr-select">Teil 3: Likes / Edits / Mehr Select</h2>
+<p><strong>12 - Verteile ein paar Likes</strong><br>
+Suche dir 2-3 andere Beiträge aus dem Feed aus und erhöhe deren Like-Zahl um jeweils 1. <em>(Achtung: Denk unbedingt an die <code>WHERE</code>-Klausel, sonst likest du aus Versehen jeden Post in der Datenbank!)</em></p>
+<p><strong>13 - Verändere einen Post</strong><br>
+Finde den Post, welchen du zu Beginn gemacht hast und ändere das bild oder die Beschreibung</p>
+<p><strong>14 - Nachricht senden</strong><br>
 Sende eine Chatnachricht an eine ander Person im Netzwerk</p>
-<p><strong>13 - Inbox anzeigen</strong><br>
+<p><strong>15 - Inbox anzeigen</strong><br>
 Schaue dir deine Inbox, um Nachrichten anzusehen.</p>
-<p><strong>14 - Welcher Beitrag hat die meisten likes?</strong><br>
+<p><strong>16 - Welcher Beitrag hat die meisten likes?</strong><br>
 Finde den Beitrag, welcher die meisten likes hat.</p>
 
     <div class="footer">
