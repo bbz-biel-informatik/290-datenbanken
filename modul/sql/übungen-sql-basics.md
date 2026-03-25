@@ -65,12 +65,7 @@ Suche dir 2-3 andere Beiträge aus dem Feed aus und erhöhe deren Like-Zahl um j
 Finde den Post, welchen du zu Beginn gemacht hast und ändere das bild oder die Beschreibung
 
 **14 - Nachricht senden**<br>
-Sende eine Chatnachricht an eine ander Person im Netzwerk
+Sende eine Chatnachricht an eine andere Person im Netzwerk
 
 **15 - Inbox anzeigen**<br>
 Schaue dir deine Inbox, um Nachrichten anzusehen.
-
-**16 - Welcher Beitrag hat die meisten likes?**<br>
-Finde den Beitrag, welcher die meisten likes hat.
-
-
