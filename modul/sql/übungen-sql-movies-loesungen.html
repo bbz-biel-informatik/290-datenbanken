@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 290 - Datenbanken</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-light.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+        }
+        .markdown-body img {
+            background-color: white;
+        }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="markdown-body">
+    <h1 id="sql-select-übungen">SQL Select Übungen</h1>
+<p>In diesen Übungen geht es darum, die select statements anzuschauen. Löse die untenstehenden Übungen im sql tool:<br></p>
+<p><a href="https://sqlproject.coffee-journal.com/exercises/8">https://sqlproject.coffee-journal.com/exercises/8</a></p>
+<br>
+
+<h2 id="teil-1-filtern-mit-where">Teil 1: Filtern mit WHERE</h2>
+<p><em>In diesem Teil liegt der Fokus auf dem Finden spezifischer Daten.</em></p>
+<h3 id="1-inception">1. Inception</h3>
+<p>Welche bewertung hat der Film Inception? Schreibe ein geeignetes query, welches den <code>title</code> und <code>popularity</code> des films mit dem Titel <code>Inception</code> ausgibt. (Grossschreibung beachten)</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, popularity
+FROM movies
+WHERE title = &#39;Inception&#39;;
+</code></pre>
+<h3 id="2-piratenfilme">2. Piratenfilme</h3>
+<p>Finde alle Piratenfilme. Suche dazu im Feld <code>overview</code> nach dem Wort <strong>&#39;pirate&#39;</strong>. Gib <code>title</code> und <code>overview</code> aus.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, overview 
+FROM movies 
+WHERE overview LIKE &#39;%pirate%&#39;;
+</code></pre>
+<hr>
+<h3 id="3-das-filmjahr-2016">3. Das Filmjahr 2016</h3>
+<p>Zeige alle Filme, die im Jahr <strong>2016</strong> veröffentlicht wurden. Nutze dafür den <code>BETWEEN</code>-Befehl für den Zeitraum vom 01. Januar bis zum 31. Dezember 2016. (Daten müssen so geschrieben werden: <code>&#39;2016-12-31</code> wobei 12 der Monat und 31 der Tag ist.)</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, release_date 
+FROM movies 
+WHERE release_date BETWEEN &#39;2016-01-01&#39; AND &#39;2016-12-31&#39;;
+</code></pre>
+<hr>
+<h3 id="4-deutsche-originale">4. Deutsche Originale</h3>
+<p>Finde 10 Filme, deren Originalsprache (<code>original_language</code>) <strong>Deutsch</strong> (<code>&#39;de&#39;</code>) ist. Gib den <code>title</code> und die <code>original_language</code> aus.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, original_language 
+FROM movies 
+WHERE original_language = &#39;de&#39; 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="5-kurze-filmvergnügen">5. Kurze Filmvergnügen</h3>
+<p>Suche nach Filmen, die eine Laufzeit (<code>runtime</code>) von <strong>weniger als 45 Minuten</strong> haben (Kurzfilme). Zeige <code>title</code> und <code>runtime</code> für maximal 10 Ergebnisse an.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, runtime 
+FROM movies 
+WHERE runtime &lt; 45;
+</code></pre>
+<hr>
+<h3 id="6-überlange-epen">6. Überlange Epen</h3>
+<p>Finde alle Filme, die länger als <strong>180 Minuten</strong> (3 Stunden) dauern. Gib den <code>title</code> und die <code>runtime</code> aus.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, runtime 
+FROM movies 
+WHERE runtime &gt; 180;
+</code></pre>
+<hr>
+<h3 id="7-filme-mit-love-im-titel">7. Filme mit &quot;Love&quot; im Titel</h3>
+<p>Benutze den <code>LIKE</code>-Operator, um Filme zu finden, die das Wort <strong>&#39;Love&#39;</strong> irgendwo im Titel (<code>title</code>) haben.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title 
+FROM movies 
+WHERE title LIKE &#39;%Love%&#39;;
+</code></pre>
+<hr>
+<h3 id="8-beliebte-neuheiten">8. Beliebte Neuheiten</h3>
+<p>Suche nach Filmen, die eine Popularität (<code>popularity</code>) von <strong>über 100</strong> haben. Zeige <code>title</code> und <code>popularity</code>.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, popularity 
+FROM movies 
+WHERE popularity &gt; 100;
+</code></pre>
+<hr>
+<h3 id="9-bestimmte-regisseure">9. Bestimmte Regisseure</h3>
+<p>Finde alle Filme in der Datenbank, bei denen <strong>&#39;Quentin Tarantino&#39;</strong> der Regisseur (<code>director</code>) war.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, director 
+FROM movies 
+WHERE director = &#39;Quentin Tarantino&#39;;
+</code></pre>
+<hr>
+<h2 id="teil-2-sortieren-mit-order-by">Teil 2: Sortieren mit ORDER BY</h2>
+<p><em>In diesem Teil kombinieren wir Filter mit der Sortierung der Ergebnisse.</em></p>
+<h3 id="10-die-10-besten-filme">10. Die 10 besten Filme</h3>
+<p>Zeige die 10 Filme mit der <strong>höchsten</strong> Durchschnittsbewertung (<code>vote_average</code>). Sortiere absteigend.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, vote_average 
+FROM movies 
+ORDER BY vote_average DESC 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="11-die-10-schlechtesten-filme">11. Die 10 schlechtesten Filme</h3>
+<p>Finde die 10 Filme (<code>title</code> und <code>vote_average</code>) mit der <strong>niedrigsten</strong> Durchschnittsbewertung. Sortiere aufsteigend.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, vote_average 
+FROM movies 
+ORDER BY vote_average ASC 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="12-die-10-teuersten-filme">12. Die 10 teuersten Filme</h3>
+<p>Welche Filme hatten das höchste Budget? Zeige <code>title</code> und <code>budget</code> der 10 teuersten Produktionen.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, budget 
+FROM movies 
+ORDER BY budget DESC 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="13-die-10-billigsten-filme">13. Die 10 billigsten Filme</h3>
+<p>Finde die 10 Filme (<code>title</code>, <code>budget</code>) mit dem geringsten Budget. Sortiere aufsteigend.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, budget 
+FROM movies 
+ORDER BY budget ASC 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="14-die-10-besten-deutschen-filme">14. Die 10 besten deutschen Filme</h3>
+<p>Kombiniere: Suche Filme, deren <code>original_language</code> <strong>&#39;de&#39;</strong> ist und sortiere sie nach der <strong>besten Bewertung</strong> absteigend.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, vote_average, original_language 
+FROM movies 
+WHERE original_language = &#39;de&#39; 
+ORDER BY vote_average DESC 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="15-die-größten-kassenschlager">15. Die größten Kassenschlager</h3>
+<p>Welche 10 Filme haben den meisten Umsatz (<code>revenue</code>) generiert? Sortiere absteigend.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, revenue 
+FROM movies 
+ORDER BY revenue DESC 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="16-die-aktuellsten-blockbuster">16. Die aktuellsten Blockbuster</h3>
+<p>Zeige die 10 neuesten Filme (nach <code>release_date</code>), die ein Budget von über <strong>100 Millionen</strong> hatten.</p>
+<p><strong>Lösung:</strong></p>
+<pre><code class="language-sql">SELECT title, release_date, budget 
+FROM movies 
+WHERE budget &gt; 100000000 
+ORDER BY release_date DESC 
+LIMIT 10;
+</code></pre>
+<hr>
+<h3 id="17-kürzeste-filme-mit-laufzeit">17. Kürzeste Filme (mit Laufzeit)</h3>
+<p>Zeige die 10 Filme mit der geringsten Laufzeit an, die aber <strong>mindestens 1 Minute</strong> lang sind.</p>
+<h2 id="lösung-sql-select-title-runtime--from-movies--where-runtime--1--order-by-runtime-asc--limit-10"><strong>Lösung:</strong>
+<code>sql SELECT title, runtime  FROM movies  WHERE runtime &gt;= 1  ORDER BY runtime ASC  LIMIT 10; </code></h2>
+
+    <div class="footer">
+        <p>BBZ Biel - Nicolas Müller</p>
+    </div>
+</body>
+</html>
