@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 290 - Datenbanken</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-light.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+        }
+        .markdown-body img {
+            background-color: white;
+        }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="markdown-body">
+    <h1 id="sql-select-übungen-🎬">SQL Select Übungen 🎬</h1>
+<p>In diesen Übungen geht es darum, die Select-Statements auszuprobieren. Löse die untenstehenden Übungen im SQL-Tool:</p>
+<p><a href="https://sqlproject.coffee-journal.com/exercises/8">https://sqlproject.coffee-journal.com/exercises/8</a></p>
+<br>
+
+<h2 id="teil-1-filtern-mit-where">Teil 1: Filtern mit WHERE</h2>
+<p><em>In diesem Teil liegt der Fokus auf dem Finden spezifischer Daten.</em></p>
+<h3 id="1-alle-ufosichtungen-in-deutschland">1. Alle Ufosichtungen in Deutschland</h3>
+<p>Finde die <code>city</code>, <code>shape</code> und <code>comments</code> aller ufo-sichtungen aus Deutschland. Bei allen deutschen Sichtungen ist die column <code>country</code> auf <code>de</code> gesetzt.</p>
+<hr>
+<h3 id="2-ufosichtungen-in-new-york">2. Ufosichtungen in New York</h3>
+<p>Finde die <code>city</code>, <code>shape</code> und <code>comments</code> aller ufo-sichtungen aus New York. Bei allen Sichtungen von New York ist die column <code>state</code> auf <code>nyc</code> gesetzt.</p>
+<hr>
+<h3 id="3-ufosichtungen-triangle">3. Ufosichtungen triangle</h3>
+<h2 id="finde-alle-ufo-sichtungen-welche-in-der-form-shape--triangle-erwähnt-wird-gib-nur-die-shapeund-comments-aus">Finde alle Ufo Sichtungen, welche in der Form (<code>shape</code>)  <code>triangle</code> erwähnt wird. Gib nur die <code>shape</code>und <code>comments</code> aus.</h2>
+<h3 id="4-ufosichtungen-triangle-2">4. Ufosichtungen triangle 2</h3>
+<p>Finde alle Ufo Sichtungen, bei welchen im Kommentar (<code>comment</code>)  <code>triangle</code> erwähnt wird. Gib nur die <code>shape</code>und <code>comments</code> aus.</p>
+<hr>
+<h3 id="5-gab-es-an-deinem-geburtstag-eine-ufosichtung">5. Gab es an deinem Geburtstag eine Ufosichtung?</h3>
+<p>Überlege dir, wie du das herausfinden kannst. Nutze dabei das property <code>date_posted</code> und ein Datum, welches du so schreibst: &#39;1998-12-20&#39; &#39;YYYY-MM-DD&#39;</p>
+<hr>
+<h3 id="6-gab-es-in-deinem-geburtsjahr-eine-ufosichtung">6. Gab es in deinem Geburtsjahr eine Ufosichtung?</h3>
+<p>Überlege dir, wie du das herausfinden kannst. Nutze dabei wiederum das property <code>date_posted</code> in Kombination mit &#39;BETWEEN&#39;</p>
+<hr>
+<h3 id="7-ufosichtungen-länger-als-1h">7. Ufosichtungen länger als 1h</h3>
+<p>Finde die Dauer <code>duration_seconds</code>, den Kommentar <code>comments</code> und das Datum <code>date_posted</code> aller Ufosichtungen, welche länger als 1h gingen. 1h = 3600 Sekunden</p>
+<hr>
+<h3 id="8-kommentare-beginnend-mit-i-went">8. Kommentare beginnend mit &#39;I went...&#39;</h3>
+<p>Finde alle Ufosichtungen, dessen Komentar mit <code>I went</code> beginnt. Nutze dazu den like operator. Gib die Stadt <code>city</code> und den Kommentar <code>comments</code> aus.</p>
+<h2 id="teil-2-sortieren-mit-order-by">Teil 2: Sortieren mit ORDER BY</h2>
+<p><em>In diesem Teil geht es darum, die Ergebnisse zu sortieren und auf eine bestimmte Anzahl zu begrenzen.</em></p>
+<h3 id="10-die-10-längsten-ufosichtungen">10. Die 10 längsten Ufosichtungen</h3>
+<p>Zeige <code>city</code>, <code>duration_seconds</code> und <code>comments</code> der <strong>10 längsten</strong> Ufosichtungen. Sortiere absteigend nach <code>duration_seconds</code>.</p>
+<hr>
+<h3 id="11-die-10-kürzesten-ufosichtungen">11. Die 10 kürzesten Ufosichtungen</h3>
+<p>Zeige <code>city</code>, <code>duration_seconds</code> und <code>comments</code> der <strong>10 kürzesten</strong> Ufosichtungen. Sortiere aufsteigend nach <code>duration_seconds</code>.</p>
+<hr>
+<h3 id="12-die-10-neuesten-ufosichtungen">12. Die 10 neuesten Ufosichtungen</h3>
+<p>Zeige <code>city</code>, <code>state</code>, <code>country</code> und <code>date_posted</code> der <strong>10 neuesten</strong> Ufosichtungen. Sortiere absteigend nach <code>date_posted</code>.</p>
+<hr>
+<h3 id="13-die-10-ältesten-ufosichtungen">13. Die 10 ältesten Ufosichtungen</h3>
+<p>Zeige <code>city</code>, <code>state</code>, <code>country</code> und <code>date_posted</code> der <strong>10 ältesten</strong> Ufosichtungen. Sortiere aufsteigend nach <code>date_posted</code>.</p>
+<hr>
+<h3 id="14-die-10-nördlichsten-ufosichtungen">14. Die 10 nördlichsten Ufosichtungen</h3>
+<p>Zeige <code>city</code>, <code>country</code> und <code>latitude</code> der <strong>10 Sichtungen mit dem höchsten Breitengrad</strong> (<code>latitude</code>). Sortiere absteigend nach <code>latitude</code>.</p>
+<hr>
+<h3 id="16-die-10-längsten-ufosichtungen-in-den-usa">16. Die 10 längsten Ufosichtungen in den USA</h3>
+<p>Kombiniere: Filtere alle Sichtungen aus den USA (<code>country = &#39;us&#39;</code>) und zeige die <strong>10 längsten</strong> davon. Gib <code>city</code>, <code>state</code> und <code>duration_seconds</code> aus. Sortiere absteigend nach <code>duration_seconds</code>.</p>
+<hr>
+<h3 id="17-die-10-neuesten-dreieck-sichtungen">17. Die 10 neuesten Dreieck-Sichtungen</h3>
+<p>Kombiniere: Filtere alle Sichtungen mit der Form (<code>shape</code>) <code>triangle</code> und zeige die <strong>10 neuesten</strong> davon. Gib <code>city</code>, <code>country</code>, <code>shape</code> und <code>date_posted</code> aus.</p>
+<hr>
+<h3 id="19-die-10-ältesten-sichtungen-aus-deutschland">19. Die 10 ältesten Sichtungen aus Deutschland</h3>
+<p>Kombiniere: Filtere alle Sichtungen aus Deutschland (<code>country = &#39;de&#39;</code>) und zeige die <strong>10 ältesten</strong> davon. Gib <code>city</code>, <code>shape</code>, <code>comments</code> und <code>date_posted</code> aus.</p>
+<hr>
+
+    <div class="footer">
+        <p>BBZ Biel - Nicolas Müller</p>
+    </div>
+</body>
+</html>
