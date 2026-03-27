@@ -30,7 +30,7 @@ Finde alle Ufo Sichtungen, welche in der Form (`shape`)  `triangle` erwähnt wir
 
 ### 4\. Ufosichtungen triangle 2
 
-Finde alle Ufo Sichtungen, bei welchen im Kommentar (`comment`)  `triangle` erwähnt wird. Gib nur die `shape`und `comments` aus.
+Finde alle Ufo Sichtungen, bei welchen im Kommentar (`comment`)  `triangle` erwähnt wird. Gib nur die `shape`und `comments` aus. Nutze dazu das keyword `like` und das Prozentzeichen `%`.t
 
 -----
 
