@@ -2,7 +2,7 @@
 
 In diesen Übungen geht es darum, die Select-Statements auszuprobieren. Löse die untenstehenden Übungen im SQL-Tool:
 
-[https://sqlproject.coffee-journal.com/exercises/8](https://sqlproject.coffee-journal.com/exercises/8)
+[https://sqlproject.coffee-journal.com/exercises/9](https://sqlproject.coffee-journal.com/exercises/9)
 
 <br>
 
