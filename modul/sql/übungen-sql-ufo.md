@@ -25,6 +25,7 @@ Finde die `city`, `shape` und `comments` aller ufo-sichtungen aus New York. Bei 
 ### 3\. Ufosichtungen triangle
 
 Finde alle Ufo Sichtungen, welche in der Form (`shape`)  `triangle` erwähnt wird. Gib nur die `shape`und `comments` aus.
+
 -----
 
 ### 4\. Ufosichtungen triangle 2
