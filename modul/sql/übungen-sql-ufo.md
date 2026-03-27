@@ -18,7 +18,7 @@ Finde die `city`, `shape` und `comments` aller ufo-sichtungen aus Deutschland. B
 
 ### 2\. Ufosichtungen in New York
 
-Finde die `city`, `shape` und `comments` aller ufo-sichtungen aus New York. Bei allen Sichtungen von New York ist die column `state` auf `nyc` gesetzt.
+Finde die `city`, `shape` und `comments` aller ufo-sichtungen aus New York. Bei allen Sichtungen von New York ist die column `state` auf `ny` gesetzt.
 
 -----
 
